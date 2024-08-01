@@ -1,0 +1,51 @@
+﻿<MudDialog>
+    <DialogContent>
+        <MudForm @ref="_employeeForm" @bind-IsValid="_isFormValid">
+            <MudGrid Spacing="3">
+                <MudItem xs="12">
+                    <MudTextField T="string" @bind-Value="Employee.FirstName"
+                                  Label="First Name"
+                                  Variant="Variant.Outlined"
+                                  OnlyValidateIfDirty="true"
+                                  Required="true"
+                                  RequiredError="Require" />
+                </MudItem>
+                <MudItem xs="12">
+                    <MudTextField T="string" @bind-Value="Employee.LastName"
+                                  Label="Last Name"
+                                  Variant="Variant.Outlined"
+                                  OnlyValidateIfDirty="true"
+                                  Required="true"
+                                  RequiredError="Require" />
+                </MudItem>
+                <MudItem xs="12">
+                    <MudSelect T="string"
+                               Label="Job Title"
+                               @bind-Value="Employee.JobTitle"
+                               Variant="Variant.Outlined"
+                               OnlyValidateIfDirty="true"
+                               Required="true"
+                               RequiredError="Require">
+                        @foreach (var title in _jobTitleList.OrderBy(x => x))
+                        {
+                            <MudSelectItem Value="@title">@title</MudSelectItem>
+                        }
+                    </MudSelect>
+                </MudItem>
+                <MudItem xs="12">
+                    <MudTextField T="decimal?" @bind-Value="Employee.HourlyRate"
+                                  Label="Hourly Rate"
+                                  Format="F2"
+                                  Variant="Variant.Outlined"
+                                  OnlyValidateIfDirty="true"
+                                  Required="true"
+                                  RequiredError="Require" />
+                </MudItem>
+            </MudGrid>
+        </MudForm>
+    </DialogContent>
+    <DialogActions>
+        <MudButton OnClick="Cancel">Cancel</MudButton>
+        <MudButton Color="Color.Secondary" Variant="Variant.Filled" OnClick="@(async () => await Submit())">Submit</MudButton>
+    </DialogActions>
+</MudDialog>

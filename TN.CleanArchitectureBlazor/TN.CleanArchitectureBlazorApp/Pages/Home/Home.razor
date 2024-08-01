@@ -1,0 +1,55 @@
+﻿@page "/"
+
+<PageTitle>Dashboard</PageTitle>
+
+@if (_employees is null)
+{
+
+    <MudProgressLinear Color="Color.Primary" Indeterminate="true" Class="my-7" />
+}
+else
+{
+    @if (_employees.Count > 0)
+    {
+        <MudGrid Spacing="3">
+            <MudItem xs="12">
+                <MudText Typo="Typo.h6">Employee List</MudText>
+                <MudSimpleTable Elevation="5" Striped="true" Class="mt-3">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Job Title</th>
+                            <th>Hourly Rate</th>
+                            <th>
+                                <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.Add" OnClick="Add" Color="Color.Primary">Add</MudButton>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (var i = 0; i < _employees.Count; i++)
+                        {
+                            var index = i;
+                            <tr>
+                                <td>@(index + 1)</td>
+                                <td>@_employees[index].FirstName</td>
+                                <td>@_employees[index].LastName</td>
+                                <td>@_employees[index].JobTitle</td>
+                                <td>@_employees[index].HourlyRate.Value.ToString("F2")</td>
+                                <td>
+                                    <MudButton Variant="Variant.Filled" OnClick="() => Edit(_employees[index])" StartIcon="@Icons.Material.Filled.Edit" Color="Color.Tertiary">Edit</MudButton>
+                                    <MudButton Variant="Variant.Filled" OnClick="() => Delete(_employees[index])"StartIcon="@Icons.Material.Filled.Delete" Color="Color.Error">Delete</MudButton>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </MudSimpleTable>
+            </MudItem>
+        </MudGrid>
+    }
+    else
+    {
+        <MudText Typo="Typo.h4">No Data</MudText>
+    }
+}
