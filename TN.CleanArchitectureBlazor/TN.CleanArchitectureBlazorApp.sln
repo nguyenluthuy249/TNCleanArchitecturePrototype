@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TN.CleanArchitectureBlazorApp", "TN.CleanArchitectureBlazorApp\TN.CleanArchitectureBlazorApp.csproj", "{83F46E1B-4D95-42C5-9077-A252A4DE4959}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TN.CleanArchitectureBlazorApp", "TN.CleanArchitectureBlazorApp\TN.CleanArchitectureBlazorApp.csproj", "{83F46E1B-4D95-42C5-9077-A252A4DE4959}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TN.CleanArchitectureBlazorApp.Application", "TN.CleanArchitectureBlazorApp.Application\TN.CleanArchitectureBlazorApp.Application.csproj", "{5C0EE7BF-74BD-4E3A-9843-D4A756F6D35F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TN.CleanArchitectureBlazorApp.Application", "TN.CleanArchitectureBlazorApp.Application\TN.CleanArchitectureBlazorApp.Application.csproj", "{5C0EE7BF-74BD-4E3A-9843-D4A756F6D35F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TN.CleanArchitectureBlazorApp.Infrastructure", "TN.CleanArchitectureBlazorApp.Infrastructure\TN.CleanArchitectureBlazorApp.Infrastructure.csproj", "{FF3B4B53-942B-413B-9FA3-794461883B3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TN.CleanArchitectureBlazorApp.Infrastructure", "TN.CleanArchitectureBlazorApp.Infrastructure\TN.CleanArchitectureBlazorApp.Infrastructure.csproj", "{FF3B4B53-942B-413B-9FA3-794461883B3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

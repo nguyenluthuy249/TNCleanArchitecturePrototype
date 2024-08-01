@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\About\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\TN.CleanArchitectureBlazorApp.Application\TN.CleanArchitectureBlazorApp.Application.csproj" />
     <ProjectReference Include="..\TN.CleanArchitectureBlazorApp.Infrastructure\TN.CleanArchitectureBlazorApp.Infrastructure.csproj" />
   </ItemGroup>
